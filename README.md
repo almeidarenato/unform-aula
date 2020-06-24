@@ -585,15 +585,18 @@ Documentação :[https://reactdatepicker.com/](https://reactdatepicker.com/)
 
 **React** **Select**
 
-Aqui vai uma opção que substitui o <select> tradicional para a lista de opções pré determinadas. Ele vai um pouco mais além do select tradicional e nos permite inclusive colocar selects com multiplas opções .
+Aqui vai uma opção que substitui o select tradicional para a lista de opções pré determinadas.
+
+Ele vai um pouco mais além do select tradicional e nos permite inclusive colocar selects com multiplas opções .
 
 Documentação: [https://react-select.com/home](https://react-select.com/home)
 
 ![Unform%20da466f768b7f42dd869c52f2f175552c/Screen_Shot_2020-06-24_at_14.12.23.png](Unform%20da466f768b7f42dd869c52f2f175552c/Screen_Shot_2020-06-24_at_14.12.23.png)
 
 ![Unform%20da466f768b7f42dd869c52f2f175552c/Screen_Shot_2020-06-24_at_14.13.39.png](Unform%20da466f768b7f42dd869c52f2f175552c/Screen_Shot_2020-06-24_at_14.13.39.png)
-
+<br/>
+<br/>
 **Renato Almeida**
 
-Linkedin: [https://www.linkedin.com/in/renato-mareque/](https://www.linkedin.com/in/renato-mareque/)
+Linkedin: [https://www.linkedin.com/in/renato-mareque/](https://www.linkedin.com/in/renato-mareque/)<br/>
 Github: [https://github.com/almeidarenato](https://github.com/almeidarenato)
