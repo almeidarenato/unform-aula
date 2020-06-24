@@ -44,17 +44,17 @@ para o typescript o unform já vem com as definições portanto não é necessá
 
 **2- Criando o componente `<Input/>`**
 
-3.1 Criar na pasta src/components o arquivo Input.js
+2.1 Criar na pasta src/components o arquivo Input.js
 
-3.2 Importar {useEffect , useRef} do `react` e {useField} do `@unform/core`
+2.2 Importar {useEffect , useRef} do `react` e {useField} do `@unform/core`
 
-3.3 Declarar o inputRef com o hook `useRef(null)`
+2.3 Declarar o inputRef com o hook `useRef(null)`
 
-3.4 Desestruturar o hook `useField(name)`{fieldName,defaultValue,registerField,error}
+2.4 Desestruturar o hook `useField(name)`{fieldName,defaultValue,registerField,error}
 
-3.5 construir um `useEffect` para usar o `registerField`
+2.5 construir um `useEffect` para usar o `registerField`
 
-3.6 construir o componente de input no retorno com os valores expostos pelo `useField(name)`
+2.6 construir o componente de input no retorno com os valores expostos pelo `useField(name)`
 
 seu `Input.js` vai ficar assim :
 
@@ -136,7 +136,7 @@ Com o useRef é possível manipular de forma muito melhor os dados do formulári
 
 Exemplo:
 
-4**.1 - Inicializando o Form já com informações:**
+4.1 - Inicializando o Form já com informações:\*\*
 
 4.1.1 - importar o `useEffect`, `useRef` a partir do React de dentro do seu App.js
 
@@ -268,7 +268,7 @@ Ex.:
 </Form>
 ```
 
-4.2 - Limpar os dados do Form\*\*
+4.2 - Limpar os dados do Form
 
 4.2.1 - Iremos criar um novo button para resetar os dados do formulário
 
