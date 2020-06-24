@@ -1,0 +1,13 @@
+{
+  "cadastros": [
+    {
+      "id": 1,
+      "nome": "Renato Ameida",
+      "endereco": {
+        "rua": "Rua Prof Laercio Neves",
+        "numero": 998
+      },
+      "email": "renatoam@ymail.com"
+    }
+  ]
+}
