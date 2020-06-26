@@ -9,6 +9,10 @@ const StyledSelect = styled.select`
   border: none;
   border-radius: 3px;
 `;
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 function Select({ name, label, children, ...rest }) {
   const inputRef = useRef(null);
@@ -23,13 +27,13 @@ function Select({ name, label, children, ...rest }) {
   }, [fieldName, registerField]);
 
   return (
-    <div>
+    <StyledDiv>
       <label htmlFor={name}>{label}:</label>
       <StyledSelect ref={inputRef} defaultValue={defaultValue} {...rest}>
         {children}
       </StyledSelect>
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
-    </div>
+    </StyledDiv>
   );
 }
 

@@ -10,6 +10,10 @@ const StyledInput = styled.input`
   border: none;
   border-radius: 3px;
 `;
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 function Input({ name, label, ...rest }) {
   const inputRef = useRef(null);
@@ -24,11 +28,11 @@ function Input({ name, label, ...rest }) {
   }, [fieldName, registerField]);
 
   return (
-    <div>
+    <StyledDiv>
       <label htmlFor={name}>{label}:</label>
       <StyledInput ref={inputRef} defaultValue={defaultValue} {...rest} />
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
-    </div>
+    </StyledDiv>
   );
 }
 

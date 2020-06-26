@@ -9,8 +9,12 @@ const StyledSelect = styled(Select)`
   background: papayawhip;
   border: none;
   border-radius: 3px;
-  width: 300px;
 `;
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 function MultiSelect({ name, label, ...rest }) {
   const inputRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
@@ -36,7 +40,7 @@ function MultiSelect({ name, label, ...rest }) {
   }, [fieldName, registerField, rest.isMulti]);
 
   return (
-    <div>
+    <StyledDiv>
       <label htmlFor={name}>{label}:</label>
       <StyledSelect
         ref={inputRef}
@@ -46,7 +50,7 @@ function MultiSelect({ name, label, ...rest }) {
       />
 
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
-    </div>
+    </StyledDiv>
   );
 }
 

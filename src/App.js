@@ -28,6 +28,8 @@ const StyledForm = styled(Form)`
   -moz-border-radius: 11px 11px 11px 11px;
   -webkit-border-radius: 11px 11px 11px 11px;
   border: 2px dashed #919191;
+
+  align-self: center;
 `;
 const StyledButton = styled.button`
   box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -44,6 +46,11 @@ const StyledButton = styled.button`
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   margin-left: 15px;
+`;
+
+const ButtonDiv = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 function App() {
@@ -136,8 +143,10 @@ function App() {
           options={optionsTec}
           isMulti
         />
-        <StyledButton type="submit">Enviar</StyledButton>
-        <StyledButton onClick={handleReset}>Limpar</StyledButton>
+        <ButtonDiv>
+          <StyledButton type="submit">Enviar</StyledButton>
+          <StyledButton onClick={handleReset}>Limpar</StyledButton>
+        </ButtonDiv>
       </StyledForm>
     </StyledContainer>
   );

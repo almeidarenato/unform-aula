@@ -11,7 +11,10 @@ const StyledInput = styled(ReactInputMask)`
   border: none;
   border-radius: 3px;
 `;
-
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 function InputMask({ name, label, ...rest }) {
   const inputRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
@@ -25,11 +28,11 @@ function InputMask({ name, label, ...rest }) {
   }, [fieldName, registerField]);
 
   return (
-    <div>
+    <StyledDiv>
       <label htmlFor={name}>{label}:</label>
       <StyledInput ref={inputRef} defaultValue={defaultValue} {...rest} />
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
-    </div>
+    </StyledDiv>
   );
 }
 

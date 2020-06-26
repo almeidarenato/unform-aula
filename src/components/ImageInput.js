@@ -10,6 +10,11 @@ const StyledInput = styled.input`
   border-radius: 3px;
 `;
 
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 function ImageInput({ name, label, ...rest }) {
   const inputRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
@@ -40,7 +45,7 @@ function ImageInput({ name, label, ...rest }) {
   }, [fieldName, registerField]);
 
   return (
-    <div>
+    <StyledDiv>
       {preview && <img src={preview} alt="Preview" width={250} />}
       <br />
       <label htmlFor={name}>{label}:</label>
@@ -51,7 +56,7 @@ function ImageInput({ name, label, ...rest }) {
         {...rest}
       />
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
-    </div>
+    </StyledDiv>
   );
 }
 
