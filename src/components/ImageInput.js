@@ -54,6 +54,7 @@ function ImageInput({ name, label, ...rest }) {
         type="file"
         onChange={handlePreview}
         {...rest}
+        accept="image/*"
       />
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
     </StyledDiv>

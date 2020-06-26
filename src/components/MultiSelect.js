@@ -24,6 +24,9 @@ function MultiSelect({ name, label, ...rest }) {
       name: fieldName,
       ref: inputRef.current,
       path: "value",
+      clearValue(ref) {
+        ref.state.value = "";
+      },
       getValue: (ref) => {
         if (ref.isMulti) {
           if (!ref.state.value) {
