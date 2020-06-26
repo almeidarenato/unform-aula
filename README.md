@@ -532,6 +532,13 @@ useEffect(() => {
     name: fieldName,
     ref: inputRef.current,
     path: "files[0]",
+    clearValue(ref) {
+      ref.value = "";
+      setPreview(null);
+    },
+    setValue(_, value) {
+      setPreview(value);
+    },
   });
 }, [fieldName, registerField]);
 ```

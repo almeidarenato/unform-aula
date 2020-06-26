@@ -7,7 +7,9 @@
         "rua": "Rua Prof Laercio Neves",
         "numero": 998
       },
-      "email": "renatoam@ymail.com"
+      "email": "renatoam@ymail.com",
+      "data_nascimento": "1990-06-10",
+      "sexo": "masculino"
     }
   ]
 }

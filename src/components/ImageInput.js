@@ -1,6 +1,14 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import { useField } from "@unform/core";
-// import { Container } from './styles';
+import styled from "styled-components";
+
+const StyledInput = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+`;
 
 function ImageInput({ name, label, ...rest }) {
   const inputRef = useRef(null);
@@ -21,6 +29,13 @@ function ImageInput({ name, label, ...rest }) {
       name: fieldName,
       ref: inputRef.current,
       path: "files[0]",
+      clearValue(ref) {
+        ref.value = "";
+        setPreview(null);
+      },
+      setValue(_, value) {
+        setPreview(value);
+      },
     });
   }, [fieldName, registerField]);
 
@@ -29,7 +44,12 @@ function ImageInput({ name, label, ...rest }) {
       {preview && <img src={preview} alt="Preview" width={250} />}
       <br />
       <label htmlFor={name}>{label}:</label>
-      <input ref={inputRef} type="file" onChange={handlePreview} {...rest} />
+      <StyledInput
+        ref={inputRef}
+        type="file"
+        onChange={handlePreview}
+        {...rest}
+      />
       {error && <span style={{ color: "#ff0000" }}>{error}</span>}
     </div>
   );
